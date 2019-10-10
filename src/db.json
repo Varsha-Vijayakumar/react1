@@ -1,0 +1,42 @@
+{
+  "post": [
+    {
+      "title": "hello everyone",
+      "id": 1
+    },
+    {
+      "title": "feeling happy",
+      "id": 2
+    },
+    {
+      "title": "asdx",
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ],
+  "reply": [],
+  "like": [
+    {
+      "like": 1,
+      "pid": 1,
+      "id": 1
+    },
+    {
+      "like": 1,
+      "pid": 2,
+      "id": 2
+    },
+    {
+      "like": 2,
+      "pid": 1,
+      "id": 3
+    },
+    {
+      "like": 1,
+      "pid": 1,
+      "id": 4
+    }
+  ]
+}
