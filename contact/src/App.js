@@ -12,13 +12,13 @@ const App = () => {
   const [count, setcount] = React.useState(1)
 
   React.useEffect(() => {
-    axios.get("http://localhost:8060/con").then(res => {
+    axios.get("http://localhost:4000/con").then(res => {
       setlist(res.data);
     });
-  }, []);
+  }, [list]);
 
   const add = (name, num) => {
-    axios.post("http://localhost:8060/con", { Name: name, Phone: num })
+    axios.post("http://localhost:4000/ccon", { name: name, phone: num })
       .then(success => {
         setlist([...list, success.data])
         setname("")
@@ -28,7 +28,7 @@ const App = () => {
 
   const Delete = (id) => {
 
-    axios.delete("http://localhost:8060/con/" + id).then(success => {
+    axios.delete("http://localhost:4000/con/" + id).then(success => {
       if (success.status === 200 && success.statusText === "OK") {
         setlist(list.filter(i => i.id !== id));
       }
@@ -36,7 +36,7 @@ const App = () => {
   };
 
   const upd = (name, num, id) => {
-    axios.put(`http://localhost:8060/con/${id}`, { Name: name, Phone: num })
+    axios.put(`http://localhost:4000/con/${id}`, { Name: name, Phone: num })
       .then(success => {
         setlist([...list, success.data])
         setname("")

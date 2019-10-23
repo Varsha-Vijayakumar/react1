@@ -24,8 +24,8 @@ const List = ({ list, Delete, upd }) => {
                                 list.map(lis => {
                                     return (
                                         <tr key={lis.id}>
-                                            <td>{lis.Name}</td>
-                                            <td>{lis.Phone}</td>
+                                            <td>{lis.name}</td>
+                                            <td>{lis.phone}</td>
                                             <td><Button onClick={() => { Delete(lis.id) }}>Del</Button></td>
                                             <td><Button onClick={() => {
                                                 console.log("entered")
